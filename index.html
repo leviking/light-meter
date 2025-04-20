@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="theme-color" content="#fff" />
+  <meta name="theme-color" content="#000" />
 
   <!-- PWA manifest & icon -->
   <link rel="manifest" href="/manifest.json" />
@@ -28,38 +28,53 @@
       <legend>Compute EV from Photo</legend>
 
       <!-- EV display -->
-      <div class="output">
-        <div>EV (ISO 100): <span id="ev100">–</span></div>
+      <div class="ev-display">
+        <div class="ev-display-label">EV (ISO 100)</div>
+        <div class="ev-display-value" id="ev100">–</div>
       </div>
 
       <!-- Photo picker -->
-      <label for="photoInput">Take or choose a photo:</label>
+      <button class="photo-button" onclick="document.getElementById('photoInput').click()">
+        Take or choose a photo
+      </button>
       <input
         type="file"
         accept="image/*"
         capture="environment"
         id="photoInput"
+        style="display: none;"
       />
 
       <!-- Preview -->
-      <div id="previewContainer" style="display:none; margin-top:1rem;">
-        <img id="previewImage" alt="Preview" style="max-width:100%;" />
+      <div id="previewContainer" style="display: none;">
+        <img id="previewImage" alt="Preview" />
       </div>
 
       <!-- Controls -->
-      <div id="controls" style="display:none; margin-top:1rem;">
-        <label>
-          Aperture:
-          <select id="apertureSelect"></select>
-        </label>
-        <label>
-          Shutter Speed:
-          <select id="shutterSelect"></select>
-        </label>
-      </div>
+      <div id="controls" style="display: none;">
+        <!-- Aperture control -->
+        <div class="control-group">
+          <div class="control-label">
+            <span class="control-name">Aperture</span>
+            <span class="control-value" id="apertureDisplay">–</span>
+          </div>
+          <div class="slider-container" id="apertureContainer">
+            <!-- Will be populated by JS -->
+          </div>
+        </div>
 
+        <!-- Shutter speed control -->
+        <div class="control-group">
+          <div class="control-label">
+            <span class="control-name">Shutter</span>
+            <span class="control-value" id="shutterDisplay">–</span>
+          </div>
+          <div class="slider-container" id="shutterContainer">
+            <!-- Will be populated by JS -->
+          </div>
+        </div>
+      </div>
     </fieldset>
   </main>
 </body>
 </html>
-
