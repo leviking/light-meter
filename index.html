@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="theme-color" content="#fff" />
+
+  <!-- PWA manifest & icon -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/favicon.png" />
+
+  <!-- Shared styles -->
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- EXIF library -->
+  <script defer src="/exif.js"></script>
+  <!-- Our logic -->
+  <script defer src="/camera.js"></script>
+
+  <title>EV Calculator</title>
+</head>
+<body>
+  <header>
+    <h1>EV Calculator</h1>
+  </header>
+  <main>
+    <fieldset>
+      <legend>Compute EV from Photo</legend>
+
+      <!-- EV display -->
+      <div class="output">
+        <div>EV (ISO 100): <span id="ev100">–</span></div>
+      </div>
+
+      <!-- Photo picker -->
+      <label for="photoInput">Take or choose a photo:</label>
+      <input
+        type="file"
+        accept="image/*"
+        capture="environment"
+        id="photoInput"
+      />
+
+      <!-- Preview -->
+      <div id="previewContainer" style="display:none; margin-top:1rem;">
+        <img id="previewImage" alt="Preview" style="max-width:100%;" />
+      </div>
+
+      <!-- Controls -->
+      <div id="controls" style="display:none; margin-top:1rem;">
+        <label>
+          Aperture:
+          <select id="apertureSelect"></select>
+        </label>
+        <label>
+          Shutter Speed:
+          <select id="shutterSelect"></select>
+        </label>
+      </div>
+
+    </fieldset>
+  </main>
+</body>
+</html>
+
