@@ -21,7 +21,21 @@
   <link rel="manifest" href="/manifest.json" />
   <link rel="icon" href="/logo.svg" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+  <!-- Enable standalone display -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="EVCalc">
+  
+  <!-- iOS app icon -->
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="apple-touch-startup-image" href="/splashscreens/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px)">
+  <link rel="apple-touch-startup-image" href="/splashscreens/launch-750x1334.png" media="(device-width: 375px) and (device-height: 667px)">
+  <link rel="apple-touch-startup-image" href="/splashscreens/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px)">
+  <link rel="apple-touch-startup-image" href="/splashscreens/launch-1242x2208.png" media="(device-width: 414px) and (device-height: 736px)">
+
+
 
   <!-- Shared styles -->
   <link rel="stylesheet" href="/styles.css" />
@@ -30,6 +44,7 @@
   <script defer src="/exif.js"></script>
   <!-- Our logic -->
   <script defer src="/camera.js"></script>
+  <script defer src="/service-worker.js"></script>
 
   <title>EV Calculator – Exposure Value from Photo | Lightmeter App</title>
 </head>
