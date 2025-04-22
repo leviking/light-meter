@@ -8,6 +8,7 @@ body {
   color: #000;
   max-width: 100%;
   margin: 0 auto;
+  max-width: 768px;
 }
 
 header h1 {
