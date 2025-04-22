@@ -19,17 +19,17 @@
   // Standard stops
   const apertureOptions = [1.4, 2, 2.8, 4, 5.6, 8, 11, 16, 22, 32, 45, 64];
   const shutterOptions = [
-    { label: '1/2000', value: 1/2000 },
-    { label: '1/1000', value: 1/1000 },
-    { label: '1/500',  value: 1/500  },
-    { label: '1/250',  value: 1/250  },
-    { label: '1/125',  value: 1/125  },
-    { label: '1/60',   value: 1/60   },
-    { label: '1/30',   value: 1/30   },
-    { label: '1/15',   value: 1/15   },
-    { label: '1/8',    value: 1/8    },
-    { label: '1/4',    value: 1/4    },
-    { label: '1/2',    value: 1/2    },
+    { label: '2k', value: 1/2000 },
+    { label: '1k', value: 1/1000 },
+    { label: '500',  value: 1/500  },
+    { label: '250',  value: 1/250  },
+    { label: '125',  value: 1/125  },
+    { label: '60',   value: 1/60   },
+    { label: '30',   value: 1/30   },
+    { label: '15',   value: 1/15   },
+    { label: '8',    value: 1/8    },
+    { label: '4',    value: 1/4    },
+    { label: '2',    value: 1/2    },
     { label: '1',      value: 1      },
   ];
 
