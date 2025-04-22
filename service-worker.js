@@ -1,12 +1,13 @@
 const CACHE = 'ev-pwa-v1';
 const ASSETS = [
   '/',
-  '/ev.html',
+  '/index.html',
   '/camera.js',
-  '/exif-js.js',
+  '/exif.js',
   '/styles.css',
   '/manifest.json',
-  '/favicon.png'
+  '/logo.svg',
+  '/apple-touch-icon.png'
 ];
 
 self.addEventListener('install', e =>
