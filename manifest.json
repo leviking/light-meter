@@ -1,6 +1,10 @@
 {
   "name": "EV Calculator",
+  "lang": "en",
   "short_name": "EVCalc",
+  "description": "Calculate EV (Exposure Value) from a photo. Lightweight light meter and exposure calculator for photographers.",
+  "scope": "/",
+  "orientation": "portrait",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#fff",
